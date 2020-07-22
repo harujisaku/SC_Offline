@@ -10,7 +10,7 @@ class Player{
     posY=_posY;
     posZ=_posZ;
     battle = new Battle(hp);
-
+    action = new Action(10,0,0,50);
   }
   void update(){
 
