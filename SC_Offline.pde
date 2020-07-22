@@ -46,7 +46,23 @@ class Gun{
 
   }
 }
-
+class Map{
+  String path,mapDataLine;
+  String[] mapDataArray,mapData;
+  Map(String _path){
+    path=_path;
+  }
+  void setup(){
+    mapDataArray = loadStrings(path);
+    if (mapDataArray[0]=="null"){
+      mapDataArray[0]="";
+    }
+    for(int i=0;mapDataArray.length>i;i++){
+      mapDataLine+=mapDataArray[i];
+    }
+    mapData=split(mapDataLine,";");
+  }
+}
 class Object{
   PGraphics vSpace;
   int w,h;
