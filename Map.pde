@@ -2,8 +2,11 @@ class Map{
   String path,mapDataLine="";
   String[] mapDataArray,mapData;
   int ofset,sizeX,sizeY,mode=0;
-  Map(String _path){
+  color[] c = {#000000,#000080,#008000,#800000,#008080,#800080,#808000,#888888,#0000ff,#00ff00,#ff0000,#00ffff,#ffff00,#ff00ff,#ffffff};
+  PGraphics maps;
+  Map(PGraphics _map,String _path){
     path=_path;
+    maps=_map;
   }
   void setup(){
     mapDataArray = loadStrings(path);
@@ -31,10 +34,20 @@ class Map{
     lineData=mapData[y+ofset];
     posData=split(lineData,",");
     return posData[x];
-    // return returnData;
   }
 
   int getIntColor(int x,int y){
     return int(getColor(x,y));
   }
+  void draw(){
+    maps.beginDraw();
+    for(int i=0;sizeX/10>i;i++){
+      for(int j=0;sizeY/10>j;j++){
+        maps.fill(red(c[getIntColor(i,j)]),green(c[getIntColor(i,j)]),blue(c[getIntColor(i,j)]));
+        maps.rect(i*10,j*10,10,10);
+      }
+    }
+    maps.endDraw();
+  }
+
 }

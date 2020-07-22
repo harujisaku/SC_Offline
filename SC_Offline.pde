@@ -49,19 +49,12 @@ class Gun{
 
 
 
-Map map;
-color[] c = {#000000,#000080,#008000,#800000,#008080,#800080,#808000,#888888,#0000ff,#00ff00,#ff0000,#00ffff,#ffff00,#ff00ff,#ffffff};
+
+Object obj;
+// color[] c = {#000000,#000080,#008000,#800000,#008080,#800080,#808000,#888888,#0000ff,#00ff00,#ff0000,#00ffff,#ffff00,#ff00ff,#ffffff};
 
 void setup(){
   size(300,300);
-  map = new Map("test.txt");
-  map.setup();
-  map.printData();
-  println(map.getColor(1,0),map.sizeX,",",map.sizeY);
-  for(int i=0;map.sizeX/10>i;i++){
-    for(int j=0;map.sizeY/10>j;j++){
-      fill(red(c[map.getIntColor(i,j)]),green(c[map.getIntColor(i,j)]),blue(c[map.getIntColor(i,j)]));
-      rect(i*10,j*10,10,10);
-    }
-  }
+  obj = new Object(300,300);
+  obj.draw();
 }
