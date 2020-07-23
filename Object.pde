@@ -10,7 +10,11 @@ class Object{
     map.setup();
     map.draw();
   }
-  void draw(){
+  void draw_obj(){
     image(vSpace,0,0);
+  }
+  void camera(int _x,int _y ,int _z){
+    PImage p=vSpace.get(_x,_y,w,h);
+    image(p,0,0);
   }
 }

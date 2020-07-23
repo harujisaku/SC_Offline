@@ -2,7 +2,7 @@ class Map{
   String path,mapDataLine="";
   String[] mapDataArray,mapData;
   int ofset,sizeX,sizeY,mode=0;
-  color[] c = {#000000,#000080,#008000,#800000,#008080,#800080,#808000,#888888,#0000ff,#00ff00,#ff0000,#00ffff,#ffff00,#ff00ff,#ffffff};
+  color[] c = {#FFFFFF,#000080,#008000,#800000,#008080,#800080,#808000,#888888,#0000ff,#00ff00,#ff0000,#00ffff,#ffff00,#ff00ff,#ffffff};
   PGraphics maps;
   Map(PGraphics _map,String _path){
     path=_path;
