@@ -42,8 +42,10 @@ class HitCheck{
 }
 
 class Gun{
+  PImage p;
   Gun(){
-
+    p=loadImage("C:/Users/haruj/Documents/99式短小銃.jpg");
+    image(p,200,200);
   }
 }
 // class Map{
@@ -119,6 +121,7 @@ class Gun{
 
 
 Object obj;
+
 // color[] c = {#000000,#000080,#008000,#800000,#008080,#800080,#808000,#888888,#0000ff,#00ff00,#ff0000,#00ffff,#ffff00,#ff00ff,#ffffff};
 
 void setup(){
